@@ -2,11 +2,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/ic_launcher_foreground">
+    android:background="@drawable/wapp">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This app is under construction, PassVault Provides encryption for your ATM passwords and social media passwords."
+        android:text="This app is under construction, PassVault Provides encryption for your ATM
+        passwords and social media passwords."
         android:textStyle="italic"
         android:layout_centerVertical="true"
         android:textSize="15dp"/>
