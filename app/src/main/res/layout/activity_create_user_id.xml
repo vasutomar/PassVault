@@ -3,6 +3,17 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/mainback">
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/EnterDetailsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENTER DETAILS"
+        android:textSize="20dp"
+        android:ellipsize="marquee"
+        android:background="@android:color/holo_green_light"
+        android:layout_above="@+id/Username"
+        android:layout_centerHorizontal="true"/>
     <EditText
         android:id="@+id/Username"
         android:hint="Username"
@@ -21,39 +32,15 @@
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimaryDark"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_above="@+id/EnterButton"/>
+        android:layout_centerVertical="true" />
     <Button
-        android:id="@+id/EnterButton"
+        android:id="@+id/SubmitButton"
+        android:layout_below="@id/Password"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter"
-        android:onClick="Verify_User"
+        android:text="Submit"
         android:textColor="@android:color/white"
         android:backgroundTint="@android:color/black"/>
-    <Button
-        android:id="@+id/ExitButton"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Exit"
-        android:onClick="Exit_Application"
-        android:layout_below="@+id/EnterButton"
-        android:textColor="@android:color/white"
-        android:backgroundTint="@android:color/black" />
-    <Button
-        android:id="@+id/ImageButton"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/ExitButton"
-        android:text="Create new account"
-        android:onClick="CreateUserId"
-        android:textColor="@android:color/white"
-        android:backgroundTint="@android:color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
-
-</RelativeLayout>
+    </RelativeLayout>

@@ -31,4 +31,9 @@ public class MainActivity extends AppCompatActivity {
         Intent k = new Intent(this,LoginActivity.class);
         startActivity(k);
     }
+
+    public void CreateUserId(View v) {
+        Intent k = new Intent(this,CreateUserID.class);
+        startActivity(k);
+    }
 }

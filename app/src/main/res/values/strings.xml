@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PassVault</string>
+    <string name="title_activity_open__page">Open_Page</string>
 </resources>
