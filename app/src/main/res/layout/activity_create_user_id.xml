@@ -17,6 +17,8 @@
     <EditText
         android:id="@+id/Username"
         android:hint="Username"
+        android:autoSizeTextType="uniform"
+        android:textColorHint="@android:color/holo_blue_light"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,6 +29,7 @@
     <EditText
         android:id="@+id/Password"
         android:hint="Password"
+        android:textColorHint="@android:color/holo_blue_light"
         android:inputType="textPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,6 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
+        android:onClick="MakeAccount"
         android:textColor="@android:color/white"
         android:backgroundTint="@android:color/black"/>
-    </RelativeLayout>
+</RelativeLayout>
