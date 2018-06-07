@@ -3,5 +3,46 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/mainback">
-
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/EnterDetailsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" User Panel"
+        android:textSize="30sp"
+        android:layout_marginTop="@android:dimen/app_icon_size"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:padding="8dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/myrect"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View file"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/black"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/View"
+        android:onClick="ViewFiles"/>
+    <Button
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Contents"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/View"
+        android:onClick="Addcontents"
+        android:id="@+id/addContents"/>
+    <Button
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/addContents"
+        android:onClick="GoBack"/>
 </RelativeLayout>

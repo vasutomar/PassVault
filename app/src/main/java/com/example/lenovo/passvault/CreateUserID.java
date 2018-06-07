@@ -53,7 +53,7 @@ public class CreateUserID extends AppCompatActivity {
             fos.write(userpass.getBytes());
             fos.close();
             String filepath = file.getAbsolutePath();
-            Toast.makeText(CreateUserID.this,filepath,Toast.LENGTH_LONG).show();
+            //Toast.makeText(CreateUserID.this,filepath,Toast.LENGTH_LONG).show();
         }
         catch(IOException e) {
             e.printStackTrace();

@@ -3,6 +3,19 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/mainback">
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/EnterDetailsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" WELCOME TO PASSVAULT "
+        android:textSize="20dp"
+        android:padding="5dp"
+        android:elevation="7dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/myrect"
+        android:layout_above="@+id/Username"
+        android:layout_centerHorizontal="true"/>
     <EditText
         android:id="@+id/Username"
         android:hint="Username"
@@ -31,7 +44,7 @@
         android:layout_centerVertical="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Authenticate"
+        android:text="LOG IN"
         android:onClick="Verify_User"
         android:textColor="@android:color/white"
         android:backgroundTint="@android:color/black"/>
@@ -46,14 +59,4 @@
         android:layout_below="@+id/EnterButton"
         android:textColor="@android:color/white"
         android:backgroundTint="@android:color/black" />
-    <Button
-        android:id="@+id/ImageButton"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/ExitButton"
-        android:text="Create new account"
-        android:onClick="CreateUserId"
-        android:textColor="@android:color/white"
-        android:backgroundTint="@android:color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 </RelativeLayout>

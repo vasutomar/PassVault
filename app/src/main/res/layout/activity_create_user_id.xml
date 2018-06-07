@@ -1,4 +1,4 @@
-<RelativeLayout
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -8,14 +8,28 @@
         android:id="@+id/EnterDetailsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ENTER DETAILS"
-        android:textSize="20dp"
-        android:ellipsize="marquee"
-        android:background="@android:color/holo_green_light"
+        android:text=" WELCOME TO PASSVAULT "
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/myrect"
+        android:layout_above="@+id/EnterDetailsText"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:id="@+id/EnterDetailsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Sign up "
+        android:textSize="20sp"
+        android:background="@drawable/myrect"
+        android:backgroundTint="@android:color/holo_green_light"
         android:layout_above="@+id/Username"
         android:layout_centerHorizontal="true"/>
     <EditText
         android:id="@+id/Username"
+        android:paddingTop="50dp"
         android:hint="Username"
         android:autoSizeTextType="uniform"
         android:textColorHint="@android:color/holo_blue_light"
@@ -24,27 +38,24 @@
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimaryDark"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_above="@+id/Password"/>
+        android:layout_centerVertical="true" />
     <EditText
-        android:id="@+id/Password"
-        android:hint="Password"
-        android:textColorHint="@android:color/holo_blue_light"
-        android:inputType="textPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/Username"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+        android:hint="Password"
+        android:autoSizeTextType="uniform"
+        android:textColorHint="@android:color/holo_blue_light"
+        android:id="@+id/Password" />
     <Button
         android:id="@+id/SubmitButton"
-        android:layout_below="@id/Password"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:layout_below="@+id/Password"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@android:color/black"
         android:onClick="MakeAccount"
-        android:textColor="@android:color/white"
-        android:backgroundTint="@android:color/black"/>
+        android:text="Submit"
+        android:textColor="@android:color/white" />
 </RelativeLayout>
