@@ -24,22 +24,26 @@ public class MakeFileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_make_file);
     }
-    protected void EncOp(String x) {
-        /*
-        Encryption Code Here
-         */
+    protected String EncOp(String x) {
+        StringBuilder sb=new StringBuilder();
+        for(int i=0;i<x.length();i++) {
+            sb.append((char) (x.charAt(i) + 3));
+        }
+        return sb.toString();
     }
-    protected void GoBack(View v) {
+    protected void EnterDet(View v) {
         EditFieldcontents = (EditText)findViewById(R.id.UserEditField);
         String x = EditFieldcontents.getText().toString();
-        EncOp(x);
+        x=EncOp(x);
         FileOutputStream fos = null;
         try {
-            fos = openFileOutput(File_Name, Context.MODE_PRIVATE);
+            fos = openFileOutput(File_Name,getApplicationContext().MODE_APPEND);
             fos.write(x.getBytes());
         } catch(IOException e) {
             e.printStackTrace();
         }
+    }
+    protected void GoBack(View v) {
         Intent k = new Intent(this,LoginActivity.class);
         startActivity(k);
     }

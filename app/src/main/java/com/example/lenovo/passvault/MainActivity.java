@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
         } catch(IOException e) {
             e.printStackTrace();
         }
-        Toast.makeText(MainActivity.this,Collected,Toast.LENGTH_LONG).show();
-        Toast.makeText(MainActivity.this,Entered,Toast.LENGTH_LONG).show();
+        //Toast.makeText(MainActivity.this,Collected,Toast.LENGTH_LONG).show();
+        //Toast.makeText(MainActivity.this,Entered,Toast.LENGTH_LONG).show();
         if(Collected==Entered) {
             Intent k = new Intent(this,LoginActivity.class);
             startActivity(k);

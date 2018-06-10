@@ -6,11 +6,20 @@
     <EditText
         android:id="@+id/UserEditField"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="wrap_content"
         android:textSize="20sp"
         android:hint="Enter Data"
-        android:textStyle="bold"
         android:textColorHint="@android:color/holo_red_dark"/>
+    <Button
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/UserEditField"
+        android:onClick="EnterDet"
+        android:id="@+id/EnterTextButton"/>
     <Button
         android:textColor="@android:color/white"
         android:backgroundTint="@android:color/black"
@@ -18,6 +27,6 @@
         android:layout_height="wrap_content"
         android:text="Back"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/UserEditField"
+        android:layout_below="@+id/EnterTextButton"
         android:onClick="GoBack"/>
 </RelativeLayout>

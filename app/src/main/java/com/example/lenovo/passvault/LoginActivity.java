@@ -22,7 +22,8 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(k);
     }
     protected void GoBack(View v) {
-        //Intent k = new Intent(this,MainActivity.this);
-        //startActivity(k);
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }

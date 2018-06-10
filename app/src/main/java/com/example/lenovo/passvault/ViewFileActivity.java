@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -13,6 +15,7 @@ import java.io.IOException;
 public class ViewFileActivity extends AppCompatActivity {
 
     private TextView Contents;
+    private TextView EncryptedContents;
     private static final String File_Name = "UserEncryptedTextFile.txt";
 
     @Override
@@ -21,6 +24,7 @@ public class ViewFileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_file);
 
         Contents = (TextView)findViewById(R.id.TextContents);
+        EncryptedContents = (TextView)findViewById(R.id.enc);
         String Collected = "";
         FileInputStream fis = null;
         try {
@@ -35,6 +39,13 @@ public class ViewFileActivity extends AppCompatActivity {
         } catch(IOException e) {
             e.printStackTrace();
         }
+        EncryptedContents.setText(Collected);
+        /* Decryption */
+        StringBuilder sb=new StringBuilder();
+        for(int i=0;i<Collected.length();i++) {
+            sb.append((char) (Collected.charAt(i) - 3));
+        }
+        Collected = sb.toString();
         Contents.setText(Collected);
     }
     protected void GoBack(View v) {
