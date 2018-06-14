@@ -6,10 +6,9 @@
     <EditText
         android:id="@+id/UserEditField"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:textSize="20sp"
-        android:hint="Enter Data"
-        android:textColorHint="@android:color/holo_red_dark"/>
+        android:hint="Enter Data" />
     <Button
         android:textColor="@android:color/white"
         android:backgroundTint="@android:color/black"

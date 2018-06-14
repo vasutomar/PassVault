@@ -22,8 +22,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/enc"
-        android:layout_below="@+id/BackButton"
+        android:layout_below="@+id/Crypttext"
         android:hint="Empty"
+        android:textSize="20sp"/>
+    <TextView
+        android:background="@android:color/holo_green_light"
+        android:layout_width="match_parent"
         android:textSize="20sp"
-        />
+        android:layout_height="wrap_content"
+        android:text="Encrypted saved file - "
+        android:layout_below="@+id/BackButton"
+        android:id="@+id/Crypttext"/>
 </RelativeLayout>

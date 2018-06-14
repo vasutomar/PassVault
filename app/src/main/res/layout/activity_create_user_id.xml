@@ -45,6 +45,7 @@
         android:layout_below="@+id/Username"
         android:layout_centerHorizontal="true"
         android:hint="Password"
+        android:inputType="textPassword"
         android:autoSizeTextType="uniform"
         android:textColorHint="@android:color/holo_blue_light"
         android:id="@+id/Password" />

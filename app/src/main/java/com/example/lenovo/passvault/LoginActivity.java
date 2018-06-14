@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.view.View;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -13,15 +14,15 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
     }
-    protected void ViewFiles(View v) {
-        Intent k = new Intent(this,ViewFileActivity.class);
+    public void ViewFiles(View v) {
+        Intent k = new Intent(LoginActivity.this,ViewFileActivity.class);
         startActivity(k);
     }
-    protected void Addcontents(View v) {
-        Intent k = new Intent(this,MakeFileActivity.class);
+    public void Addcontents(View l) {
+        Intent k = new Intent(LoginActivity.this,MakeFileActivity.class);
         startActivity(k);
     }
-    protected void GoBack(View v) {
+    public void GoBack(View cs) {
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);

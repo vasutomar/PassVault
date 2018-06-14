@@ -29,13 +29,14 @@ public class MakeFileActivity extends AppCompatActivity {
         for(int i=0;i<x.length();i++) {
             sb.append((char) (x.charAt(i) + 3));
         }
-        return sb.toString();
+        String y =  sb.toString();
+        return y;
     }
-    protected void EnterDet(View v) {
+    public void EnterDet(View v) {
         EditFieldcontents = (EditText)findViewById(R.id.UserEditField);
         String x = EditFieldcontents.getText().toString();
         x=EncOp(x);
-        FileOutputStream fos = null;
+        FileOutputStream fos;
         try {
             fos = openFileOutput(File_Name,getApplicationContext().MODE_APPEND);
             fos.write(x.getBytes());
@@ -43,8 +44,7 @@ public class MakeFileActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    protected void GoBack(View v) {
-        Intent k = new Intent(this,LoginActivity.class);
-        startActivity(k);
+    public void GoBack(View v) {
+        finish();
     }
 }

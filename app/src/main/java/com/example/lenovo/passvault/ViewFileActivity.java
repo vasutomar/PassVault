@@ -40,7 +40,7 @@ public class ViewFileActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         EncryptedContents.setText(Collected);
-        /* Decryption */
+        /* Decryption*/
         StringBuilder sb=new StringBuilder();
         for(int i=0;i<Collected.length();i++) {
             sb.append((char) (Collected.charAt(i) - 3));
@@ -48,8 +48,7 @@ public class ViewFileActivity extends AppCompatActivity {
         Collected = sb.toString();
         Contents.setText(Collected);
     }
-    protected void GoBack(View v) {
-        Intent k = new Intent(this,LoginActivity.class);
-        startActivity(k);
+    public void GoBack(View v) {
+        finish();
     }
 }
