@@ -31,21 +31,28 @@ public class CreateUserID extends AppCompatActivity{
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user_id);
-
-    }
-    public void MakeAccount(View v) {
-
         usernameField = (EditText)findViewById(R.id.Username);
         passwordField = (EditText)findViewById(R.id.Password);
-        userid = usernameField.getText().toString();
-        userpass = passwordField.getText().toString();
 
-        /*AccountManager am = AccountManager.get(CreateUserID.this);
-        Account account = am.getAccountsByType("com.google");*/
-
-        Intent k = new Intent(this,MainActivity.class);
-        k.putExtra("Username",userid);
-        k.putExtra("Password",userpass);
+    }
+    public String EncOp(String x) {
+        StringBuilder sb=new StringBuilder();
+        for(int i=0;i<x.length();i++) {
+            sb.append((char) (x.charAt(i) + 3));
+        }
+        return(sb.toString());
+    }
+    public void MakeAccount(View v) {
+        Intent k = new Intent(CreateUserID.this,MainActivity.class);
+        FileOutputStream fos;
+        try{
+            fos = openFileOutput("LoginCredentials.txt",getApplicationContext().MODE_PRIVATE);
+            fos.write(usernameField.getText().toString().getBytes());
+            fos.write(passwordField.getText().toString().getBytes());
+            fos.close();
+        } catch(IOException e ){
+            e.printStackTrace();
+        }
         startActivity(k);
     }
 }
